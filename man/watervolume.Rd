@@ -1,0 +1,36 @@
+\name{watervolume}
+\alias{watervolume}
+\title{Water volume in function of water-table depth or height 'swc', Hydraulic Conductivity 'khy' , Soil Water Capacity 'cap' , Soil Water (Hydraulic) Diffusivity 'diffusivity'}
+\usage{
+watervolume(d = H - h, H = 1, h = NA, nstep = 100, Gamma = 1,
+  soilwaterretentioncurve = swc, ...)
+}
+\arguments{
+  \item{d}{water-table depth (under surface)}
+
+  \item{h}{water-table heigth (over bedrock)}
+
+  \item{H}{soil thickness}
+
+  \item{Gamma}{liner coefficient for hydrostatic profile
+  (Default is 1)}
+
+  \item{nstep}{number of vertical spatial cells. Default is
+  100}
+
+  \item{soilwaterretentioncurve}{function describing the
+  soil water retention curve. Default is \code{\link{swc}}}
+
+  \item{...}{parametes for
+  \code{soil.water.retention.curve}}
+}
+\description{
+Water volume in function of water-table depth or height
+'swc', Hydraulic Conductivity 'khy' , Soil Water Capacity
+'cap' , Soil Water (Hydraulic) Diffusivity 'diffusivity'
+}
+\note{
+the water volume per topographical area unit obtained by
+vertical integration off soil water content profile
+}
+
