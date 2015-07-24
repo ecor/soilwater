@@ -43,14 +43,18 @@ NULL
 #' for (it in names(D)) {
 #'   
 #'   i=which(names(D)==it)
-#'   D[,i] <- diffusivity(psi=psi,v=v[i],ksat=ks[i],alpha=alpha[i],n=n[i],m=m[i],theta_sat=theta_sat[i],theta_res=theta_res[i])
+#'   D[,i] <- diffusivity(psi=psi,
+#'             v=v[i],ksat=ks[i],alpha=alpha[i],
+#'             n=n[i],m=m[i],theta_sat=theta_sat[i],
+#'             theta_res=theta_res[i])
 #'  
 #' }
 
 #'# plot diffusivity on log scale 
 #' lty <- 1:length(names(D) )
 #' 
-#' plot(psi,D[,1],lty=lty[1],main="Diffusvity vs psi",xlab="psi [m]",ylab="D [m^2/s]",type="l",ylim=range(D),ylog=TRUE)
+#' plot(psi,D[,1],lty=lty[1],main="Diffusvity vs psi",xlab="psi [m]",
+#' ylab="D [m^2/s]",type="l",ylim=range(D),ylog=TRUE)
 #' for (i in 2:ncol(D)) {
 #'   lines(psi,D[,i],lty=lty[i]) 
 #' }
@@ -60,7 +64,8 @@ NULL
 #' # pot diffusivity on log scale 
 #' lty <- 1:length(names(D) )
 #' 
-#' plot(psi,Dinv[,1],lty=lty[1],main="1/Diffusvity vs psi",xlab="psi [m]",ylab="1/D [s/m^2]",type="l",ylim=range(Dinv),ylog=TRUE)
+#' plot(psi,Dinv[,1],lty=lty[1],main="1/Diffusvity vs psi",
+#' xlab="psi [m]",ylab="1/D [s/m^2]",type="l",ylim=range(Dinv),ylog=TRUE)
 #' for (i in 2:ncol(Dinv)) {
 #'   lines(psi,Dinv[,i],lty=lty[i]) 
 #' }
@@ -116,12 +121,12 @@ khy <- function (psi=0.5,v=0.5,ksat=0.01,alpha=1.0,n=1.5,m=1-1/n,theta_sat=0.4,t
   if (length(type_khy)>1) type_khy <- type_khy[1]
 	
   if (type_khy=="Mualem") {
-  s <- swc(psi=psi,alpha=alpha,m=m,n=n,theta_sat=theta_sat,theta_res=theta_res,psi_s=psi_s,lambda=lambda,type_swc=type_swc,saturation_index=TRUE,...)
+  s <- soilwater::swc(psi=psi,alpha=alpha,m=m,n=n,theta_sat=theta_sat,theta_res=theta_res,psi_s=psi_s,lambda=lambda,type_swc=type_swc,saturation_index=TRUE,...)
   
   k <- ksat*s^v*(1-(1-s^(1/m))^m)^2
 }else if (type_khy=="BrooksAndCorey") {
 	
-	s <- swc(psi=psi,alpha=alpha,m=m,n=n,theta_sat=theta_sat,theta_res=theta_res,psi_s=psi_s,lambda=lambda,type_swc=type_swc,saturation_index=TRUE,...)
+	s <- soilwater::swc(psi=psi,alpha=alpha,m=m,n=n,theta_sat=theta_sat,theta_res=theta_res,psi_s=psi_s,lambda=lambda,type_swc=type_swc,saturation_index=TRUE,...)
 	k <- ksat*s^b
 	
 } else {	
@@ -160,8 +165,8 @@ NULL
 # hydraulic diffusivity 
 diffusivity <- function (psi=0.5,v=0.5,ksat=0.01,alpha=1.0,n=1.5,m=1-1/n,theta_sat=0.4,theta_res=0.05,...) {
   
-  k <- khy(psi=psi,v=v,ksat=ksat,alpha=alpha,n=n,m=m,theta_sat=theta_sat,theta_res=theta_res,...)
-  C <- cap(psi=psi,alpha=alpha,n=n,theta_sat=theta_sat,theta_res=theta_res,...)
+  k <- soilwater::khy(psi=psi,v=v,ksat=ksat,alpha=alpha,n=n,m=m,theta_sat=theta_sat,theta_res=theta_res,...)
+  C <- soilwater::cap(psi=psi,alpha=alpha,n=n,theta_sat=theta_sat,theta_res=theta_res,...)
   
   return(k/C) 
   

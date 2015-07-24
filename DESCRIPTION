@@ -1,20 +1,16 @@
 Package: soilwater
 Maintainer: Emanuele Cordano <emanuele.cordano@gmail.com>
 License: GPL (>= 2)
-Title: soilwater: Implements parametric formulas for soil water retention or
-    conductivity curve
+Title: Implementation of Parametric Formulas for Soil Water Retention or Conductivity Curve
 Type: Package
 Author: Emanuele Cordano, Daniele Andreis, Fabio Zottele
-Description: It contains implementations of parametric formulas for soil water
+Description: It is a set of R implementations of parametric formulas of soil water
     retention or conductivity curve. At the moment, only Van Genuchten (for
     soil water retention curve) and Mualem (for hydraulic conductivity) were
     implemented. See reference
-    \url{http://en.wikipedia.org/wiki/Water_retention_curve}. Any contributions
-    or suggestions are warmly welcomed.
+    \url{http://en.wikipedia.org/wiki/Water_retention_curve}. 
 Suggests:
     raster
 Version: 1.0.2
-Date: 2014-05-08
-LICENSE: GPL3
-URL:
-    http://cri.gmpf.eu/Research/Sustainable-Agro-Ecosystems-and-Bioresources/Dynamics-in-the-agro-ecosystems,http://meteogis.fmach.it/wiki/index.php/Ecor,http://en.wikipedia.org/wiki/Water_retention_curve
+Date: 2015-07-24
+

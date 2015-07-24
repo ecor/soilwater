@@ -9,7 +9,16 @@ NULL
 #' @param m maximum limit of summary truncation. Default is 100.
 #' 
 #' 
-#' @note This function is experimental and under development by Emanuele Cordano. 
+#' @note This function calcletes the water-table recharge rate in a hillslope assuming:
+#'             
+#' 1. Richards' Equation is linearized and reduced to the form of heat equation;
+#' 2. The diffusion water-table rate is connectedwith soil pressure head according with eq. 13 (Cordano and Rigon, 2008);
+#' 
+#' @references
+#' 
+#' Cordano, E., and R. Rigon (2008), A perturbative view on the subsurface water pressure response at hillslope scale, Water Resour. Res., 44, W05407, \url{doi:10.1029/2006WR005740}.
+#' \url{http://onlinelibrary.wiley.com/doi/10.1029/2006WR005740/pdf}
+#' 
 #' @export
 #' 
 #' @examples 
