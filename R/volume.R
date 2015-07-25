@@ -17,7 +17,9 @@ NULL
 #'
 #' @param ... parametes for \code{soil.water.retention.curve}
 #' 
-#' @note the water volume per topographical area unit obtained by vertical integration off soil water content profile 
+#' @seealso \code{\link{swc}}
+#' 
+#' @note The water volume per topographical area unit obtained by vertical integration off soil water content profile 
 #' 
 #' 
 #' @export

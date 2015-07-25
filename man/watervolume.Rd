@@ -26,6 +26,9 @@ watervolume(d = H - h, H = 1, h = NA, nstep = 100, Gamma = 1,
 Water volume in function of water-table depth or height 'swc', Hydraulic Conductivity 'khy' , Soil Water Capacity 'cap' , Soil Water (Hydraulic) Diffusivity 'diffusivity'
 }
 \note{
-the water volume per topographical area unit obtained by vertical integration off soil water content profile
+The water volume per topographical area unit obtained by vertical integration off soil water content profile
+}
+\seealso{
+\code{\link{swc}}
 }
 

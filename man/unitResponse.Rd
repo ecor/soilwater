@@ -24,6 +24,7 @@ The water table recharge: the response unit
 This function calcletes the water-table recharge rate in a hillslope assuming:
 
 1. Richards' Equation is linearized and reduced to the form of heat equation;
+
 2. The diffusion water-table rate is connectedwith soil pressure head according with eq. 13 (Cordano and Rigon, 2008);
 }
 \examples{
@@ -41,7 +42,7 @@ val3 <- unitResponse(t, d = d[3], D = 1, H = 1, m = 500)
 val4 <- unitResponse(t, d = d[4], D = 1, H = 1, m = 500)
 }
 \references{
-Cordano, E., and R. Rigon (2008), A perturbative view on the subsurface water pressure response at hillslope scale, Water Resour. Res., 44, W05407, \url{doi:10.1029/2006WR005740}.
+Cordano, E., and R. Rigon (2008), A perturbative view on the subsurface water pressure response at hillslope scale, Water Resour. Res., 44, W05407, doi:10.1029/2006WR005740.
 \url{http://onlinelibrary.wiley.com/doi/10.1029/2006WR005740/pdf}
 }
 
