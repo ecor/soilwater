@@ -86,15 +86,16 @@ swc <- function (psi=0.5,alpha=1.0,n=1.5,m=1-1/n,theta_sat=0.4,theta_res=0.05,ps
 		
 		psiloc <- psi
 		psi[psi>0] <- 0.0
+	
 		
-		sat_index <- (1+(-alpha*psi)^n)^(-m)
+		sat_index <- (1+(0-alpha*psi)^n)^(0-m)
 		
 	}else if (type_swc=="BrooksAndCorey"){
 		
 		psiloc <- psi 
 		psi[psi>psi_s] <- psi_s
 		psirel <- psi/psi_s
-		sat <- psirel^(-1/lambda)
+		sat <- psirel^(0-1/lambda)
 		
 	} else {
 		return(NA)
@@ -150,7 +151,7 @@ cap <- function (psi=0.5,alpha=1.0,n=1.5,m=1-1/n,theta_sat=0.4,theta_res=0.05,ty
 	psiloc <- psi
     psi[psi>0] <- 0.0
     
-    out <- alpha*(theta_sat-theta_res)*(1+(-alpha*psi)^n)^(-m-1)*m*n*(-alpha*psi)^(n-1)
+    out <- alpha*(theta_sat-theta_res)*(1+(0-alpha*psi)^n)^(0-m-1)*m*n*(0-alpha*psi)^(n-1)
     
     return(out)
   
