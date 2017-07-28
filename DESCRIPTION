@@ -11,7 +11,7 @@ Description: It is a set of R implementations of parametric formulas of soil wat
     \url{http://en.wikipedia.org/wiki/Water_retention_curve}. 
 Suggests:
     raster
-Version: 1.0.4
-Date: 2017-06-29
+Version: 1.0.5
+Date: 2017-07-28
 URL: https://github.com/ecor/soilwater
 
