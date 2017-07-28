@@ -1,3 +1,4 @@
+#! /usr/bin/Rscript
 # file geogr1.R
 #
 # This file roxygenizes all documentation wriiten in "Roxygen" format.
@@ -18,6 +19,7 @@
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ###############################################################################
+
 library(roxygen2)
 
 path <- "/home/ecor/Dropbox/R-packages"
